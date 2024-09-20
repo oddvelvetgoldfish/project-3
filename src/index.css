@@ -48,7 +48,7 @@
 }
 
 .filter-button.active {
-  @apply bg-blue-500 text-white;
+  @apply bg-blue-600 text-white;
 }
 
 .contact-form {
