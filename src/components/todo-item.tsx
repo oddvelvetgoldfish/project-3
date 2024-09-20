@@ -15,7 +15,7 @@ export const TodoItem: React.FC<TodoItemProps> = ({
   return (
     <div className="todo-item">
       <span
-        className={todo.completed ? "completed" : ""}
+        className={`${todo.completed ? "completed" : ""} cursor-pointer`}
         onClick={() => toggleComplete(todo.id)}
       >
         {todo.text}
