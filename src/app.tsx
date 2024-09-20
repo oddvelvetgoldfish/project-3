@@ -47,7 +47,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <Router>
+    <Router basename="/project-3">
       <Navbar />
       <Routes>
         <Route path="/" element={<Navigate to="/todos" />} />
