@@ -3,8 +3,8 @@ import { Todo } from "../types";
 
 interface TodoItemProps {
   todo: Todo;
-  toggleComplete: (id: number) => void;
-  removeTodo: (id: number) => void;
+  toggleComplete: (id: string) => void;
+  removeTodo: (id: string) => void;
 }
 
 export const TodoItem: React.FC<TodoItemProps> = ({

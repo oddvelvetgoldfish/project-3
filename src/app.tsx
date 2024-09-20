@@ -7,17 +7,18 @@ import {
 } from "react-router-dom";
 import Navbar from "./components/navbar";
 import { Todo } from "./types";
-import { TodoList } from "./components/todo-list";
+import { TodosPage } from "./components/todos-page";
+import { v4 as uuidv4 } from "uuid";
 
 const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([
     {
-      id: 0,
+      id: "0",
       text: "Todo 1",
       completed: false,
     },
     {
-      id: 1,
+      id: "1",
       text: "Todo 2",
       completed: false,
     },
@@ -25,14 +26,14 @@ const App: React.FC = () => {
 
   const addTodo = (text: string) => {
     const newTodo: Todo = {
-      id: Date.now(),
+      id: uuidv4(),
       text,
       completed: false,
     };
     setTodos((prevTodos) => [newTodo, ...prevTodos]);
   };
 
-  const toggleComplete = (id: number) => {
+  const toggleComplete = (id: string) => {
     setTodos((prevTodos) =>
       prevTodos.map((todo) =>
         todo.id === id ? { ...todo, completed: !todo.completed } : todo,
@@ -40,7 +41,7 @@ const App: React.FC = () => {
     );
   };
 
-  const removeTodo = (id: number) => {
+  const removeTodo = (id: string) => {
     setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
   };
 
@@ -52,7 +53,7 @@ const App: React.FC = () => {
         <Route
           path="/todos"
           element={
-            <TodoList
+            <TodosPage
               todos={todos}
               toggleComplete={toggleComplete}
               removeTodo={removeTodo}

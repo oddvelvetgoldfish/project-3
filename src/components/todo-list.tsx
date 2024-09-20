@@ -4,8 +4,8 @@ import { Todo } from "../types";
 
 interface TodoListProps {
   todos: Todo[];
-  toggleComplete: (id: number) => void;
-  removeTodo: (id: number) => void;
+  toggleComplete: (id: string) => void;
+  removeTodo: (id: string) => void;
 }
 
 export const TodoList: React.FC<TodoListProps> = ({
