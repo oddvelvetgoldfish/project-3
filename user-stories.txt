@@ -1,0 +1,5 @@
+1. Add New Todo Items: As a user, I want to add new tasks to my todo list, so that I can keep track of tasks I need to complete.
+2. Mark Tasks as Completed: As a user, I want to mark tasks as completed, so that I can see which tasks I've finished and focus on remaining tasks.
+3. Filter Todo Items: As a user, I want to filter my todo list to show all, completed, or incomplete tasks, so that I can focus on specific tasks based on their completion status.
+4. Remove Tasks: As a user, I want to remove tasks from my todo list, so that I can manage my list by deleting tasks I no longer need.
+5. Submit Contact Form: As a user, I want to fill out and submit a contact form, so that I can send my feedback or inquiries.
