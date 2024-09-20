@@ -9,6 +9,7 @@ import Navbar from "./components/navbar";
 import { Todo } from "./types";
 import { TodosPage } from "./components/todos-page";
 import { v4 as uuidv4 } from "uuid";
+import { ContactPage } from "./components/contact-page";
 
 export const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([
@@ -61,7 +62,7 @@ export const App: React.FC = () => {
             />
           }
         />
-        <Route path="/contact" element={<div>Contact</div>} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Router>
   );
