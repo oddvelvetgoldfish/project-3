@@ -1,50 +1,43 @@
-# React + TypeScript + Vite
+# Project 2: React Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Name: Sara Gharagozlou
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a React-based Todo List application that allows users to manage their tasks efficiently. The app provides a user-friendly interface to add, view, filter, and remove todo items. Additionally, it includes a contact form where users can input their contact information and comments.
 
-## Expanding the ESLint configuration
+## Details:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Navigation: Use the top horizontal navigation bar to switch between the Todos and Contact pages.
 
-- Configure the top-level `parserOptions` property like this:
+### Todos Page (/todos)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Add New Todo: Use the form on the right side to add a new todo item by entering the task description and clicking the Add Todo button.
+- View Todos: The list of todo items is displayed on the left side. Each item shows the task text.
+- Mark as Completed: Click on a todo item to toggle its completion status. Completed tasks are visually indicated with a strikethrough effect.
+- Remove Todo: Click the Delete button next to a todo item to remove it from the list.
+- Filter Todos: Use the filter buttons above the todo list to view All, Completed, or Incomplete tasks.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Contact Page (/contact)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Contact Form: Fill out the form with your First Name, Last Name, Email, and Comments.
+- Controlled Components: The form uses controlled components, so any input you enter updates the form's internal state.
+- Submit Form: Click the Submit button to submit your contact information. Currently just outputs to console.log and clears the form.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Technologies Used
+
+- HTML
+- CSS
+- TypeScript
+- React
+- Vite
+- TailwindCSS
+- pnpm
+
+## Ideas for future improvement
+
+- Persistent Storage: Implement local storage or integrate a backend to save todos between sessions.
+- User Authentication: Allow users to create accounts and save their todo lists securely.
+- Enhanced Contact Form: Add form validation and integrate an API to handle form submissions.
+- Responsive Design: Improve the layout to be fully responsive on all device sizes.
+- Additional Features: Implement editing of existing todos and setting due dates or priorities.
