@@ -24,7 +24,7 @@
 }
 
 .todo-list {
-  @apply w-2/3;
+  @apply w-full;
 }
 
 .todo-form {
