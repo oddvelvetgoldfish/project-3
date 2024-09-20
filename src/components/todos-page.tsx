@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { TodoList } from "../components/todo-list";
 import { Todo } from "../types";
+import { TodoForm } from "./todo-form";
 
 type Filter = "all" | "completed" | "incomplete";
 
@@ -8,11 +9,13 @@ interface TodosPageProps {
   todos: Todo[];
   toggleComplete: (id: string) => void;
   removeTodo: (id: string) => void;
+  addTodo: (text: string) => void;
 }
 export const TodosPage: React.FC<TodosPageProps> = ({
   todos,
   toggleComplete,
   removeTodo,
+  addTodo,
 }) => {
   const [filter, setFilter] = useState<Filter>("all");
 
@@ -24,6 +27,7 @@ export const TodosPage: React.FC<TodosPageProps> = ({
 
   return (
     <div className="todo-container">
+      <TodoForm addTodo={addTodo} />
       <div className="w-full">
         <div className="filter-buttons">
           <button

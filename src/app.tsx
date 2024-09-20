@@ -10,7 +10,7 @@ import { Todo } from "./types";
 import { TodosPage } from "./components/todos-page";
 import { v4 as uuidv4 } from "uuid";
 
-const App: React.FC = () => {
+export const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([
     {
       id: "0",
@@ -57,6 +57,7 @@ const App: React.FC = () => {
               todos={todos}
               toggleComplete={toggleComplete}
               removeTodo={removeTodo}
+              addTodo={addTodo}
             />
           }
         />
@@ -65,5 +66,3 @@ const App: React.FC = () => {
     </Router>
   );
 };
-
-export default App;
